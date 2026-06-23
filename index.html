@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Lanche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>🍔 CARLOS LANCHE</h1>
+    <p>O sabor que conquista a cada mordida!</p>
+</header>
+
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section id="inicio" class="banner">
+    <h2>Bem-vindo ao Carlos Lanche!</h2>
+    <p>Os melhores pastéis, coxinhas e enroladinhos da cidade.</p>
+    <a href="#cardapio">
+        <button>Ver Cardápio</button>
+    </a>
+</section>
+
+<section id="cardapio">
+
+    <h2>🍽️ Nosso Cardápio</h2>
+
+    <div class="cardapio">
+
+        <div class="produto">
+            <h3>🥟 Pastel de Carne</h3>
+            <p>Massa crocante com recheio de carne.</p>
+            <h4>R$ 3,00</h4>
+            <button onclick="adicionar('Pastel de Carne',3)">
+Adicionar
+</button>
+        </div>
+
+        <div class="produto">
+            <h3>🧀 Pastel de Queijo</h3>
+            <p>Recheado com muito queijo.</p>
+            <h4>R$ 3,00</h4>
+            <button onclick="adicionar('Pastel de Queijo',3)">
+Adicionar
+</button>
+        </div>
+
+        <div class="produto">
+            <h3>🍗 Coxinha</h3>
+            <p>Frango temperado e massa macia.</p>
+            <h4>R$ 3,00</h4>
+            <button onclick="adicionar('Coxinha',3)">
+Adicionar
+</button>
+        </div>
+
+        <div class="produto">
+            <h3>🌭 Enroladinho</h3>
+            <p>Salsicha envolvida em massa fofinha.</p>
+            <h4>R$ 3,00</h4>
+            <button onclick="adicionar('Enroladinho',3)">
+Adicionar
+</button>
+        </div>
+
+    </div>
+
+<div id="carrinho">
+
+    <h2>🛒 Carrinho</h2>
+
+    <ul id="lista-carrinho">
+    </ul>
+
+    <h3>Total: <span id="total">R$ 0,00</span></h3>
+
+    <button id="finalizar">
+        Finalizar Pedido
+    </button>
+
+</div><section id="contato">
+
+    <h2>📞 Contato</h2>
+
+    <p><strong>WhatsApp:</strong> (68) 999691451</p>
+
+    <a href="https://wa.me/5568999691451?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Carlos%20Lanche." target="_blank">
+
+    <button class="whatsapp">
+        📲 Pedir pelo WhatsApp
+    </button>
+
+</a>
+
+<p><strong>📍 Localização</strong></p>
+
+<p>
+    Av. Coronel Mâncio Lima, 5700<br>
+    Bairro Aeroporto Velho<br>
+    Cruzeiro do Sul - AC
+</p>
+
+<br>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Av.+Coronel+M%C3%A2ncio+Lima,+5700,+Aeroporto+Velho,+Cruzeiro+do+Sul,+AC"
+   target="_blank">
+    <button>📍 Como chegar</button>
+</a></section>
+
+<footer>
+    <p>© 2026 Carlos Lanche - Todos os direitos reservados.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
